@@ -12,15 +12,26 @@ import java.util.Set;
  */
 public class ChineseChess extends AbsBoard {
 
-    private IBoardMap boardMap;
+    int[][] mView = new int[][]{
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+            {0, 1, 2, 3, 4, 5, 6, 7, 8},
+    };
 
     public static ChineseChess createChess() {
         return new ChineseChess(new ChineseBoardMap());
     }
 
-    private ChineseChess(IBoardMap boardMap) {
+    private ChineseChess(ChineseBoardMap boardMap) {
         super(boardMap);
-        this.boardMap = boardMap;
+        boardMap.initPiece();
     }
 
     public ChineseChess() {
@@ -28,43 +39,40 @@ public class ChineseChess extends AbsBoard {
     }
 
     @Override
-    protected void savePieceMoveSetup() {
-
+    protected void savePieceMoveSetup(Map<String, IPiece> map) {
+        System.out.println();
+        System.out.println("保存棋盘成功");
+        System.out.println();
     }
 
     public void view() {
 
-        Map<String, IPiece> map = boardMap.getBoardMap();
+        Map<String, IPiece> map = super.boardMap.getBoardMap();
 
-        int[][] view = new int[][]{
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-                {0, 1, 2, 3, 4, 5, 6, 7, 8},
-        };
+        for (int x = 0; x < 10; x++) {
 
-        for (int y = 0; y < 10; y++) {
-
-            for (int x = 0; x < 9; x++) {
+            for (int y = 0; y < 9; y++) {
 
                 IPiece piece = map.get(x + "," + y);
 
-                if (piece == null)
-                    System.out.print(-1);
-                else
-                    System.out.print("+" + piece.getType());
+                if (piece == null) {
+                    System.out.print("十");
+                } else {
+                    System.out.print(piece.getView());
+                }
 
                 System.out.print(" ");
             }
 
             System.out.println();
+
+            if (x == 4) {
+                System.out.println("------------------------");
+                System.out.println("\t\t汉界  楚河");
+                System.out.println("------------------------");
+            }
         }
+
     }
 
 }

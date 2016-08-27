@@ -16,11 +16,10 @@ public class Game {
 
         ChineseChess game = new ChineseChess();
 
-        IPiece ju = new JuPiece(Groups.GROUP_BLUE);
-
-        game.putPiece(new BoardPoint(4, 0), ju);
-
-        game.putPiece(new BoardPoint(4, 5), ju);
+        game.putPiece(new BoardPoint(1, 0), game.getPiece(new BoardPoint(0,0)));
+        game.putPiece(new BoardPoint(1, 3), game.getPiece(new BoardPoint(1,0)));
+        game.putPiece(new BoardPoint(6, 3), game.getPiece(new BoardPoint(1,3)));
+        game.putPiece(new BoardPoint(6, 2), game.getPiece(new BoardPoint(6,3)));
 
         game.view();
 

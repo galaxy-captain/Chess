@@ -3,6 +3,8 @@ package org.ddd.board;
 import chinesechess.board.ChineseBoardMap;
 import org.ddd.piece.impl.IPiece;
 
+import java.util.Map;
+
 /**
  * Created by ddd on 16/8/26.
  */
@@ -22,7 +24,7 @@ public abstract class AbsBoard implements IBoard {
 
         // 如果移动成功
         if (isMove) {
-            savePieceMoveSetup();
+            savePieceMoveSetup(boardMap.getBoardMap());
         }
 
         return isMove;
@@ -37,6 +39,6 @@ public abstract class AbsBoard implements IBoard {
         boardMap.putPiece(point, piece);
     }
 
-    protected abstract void savePieceMoveSetup();
+    protected abstract void savePieceMoveSetup(Map<String,IPiece> boardMap);
 
 }

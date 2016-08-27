@@ -6,15 +6,26 @@ package org.ddd.board;
  */
 public class BoardPoint {
 
+    /**
+     * 上下方向,X轴
+     */
     private int x = -1;
+
+    /**
+     * 左右方向,Y轴
+     */
     private int y = -1;
+
+    public BoardPoint() {
+        this(0, 0);
+    }
 
     public BoardPoint(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public void setXY(int x,int y){
+    public void setXY(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -27,4 +38,19 @@ public class BoardPoint {
         return y;
     }
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "BoardPoint{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

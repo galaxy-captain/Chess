@@ -10,12 +10,13 @@ public abstract class AbsPiece implements IPiece {
 
     protected PieceEntity entity = new PieceEntity();
 
-    public AbsPiece(int group) {
-        intiPiece(group);
+    public AbsPiece(int group, BoardPoint point) {
+        intiPiece(group, point);
     }
 
-    private void intiPiece(int group) {
+    private void intiPiece(int group, BoardPoint point) {
         entity.group = group;
+        entity.point = point;
         entity.type = pieceType();
         entity.rule = pieceRule();
     }

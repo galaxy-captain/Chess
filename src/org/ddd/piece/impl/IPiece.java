@@ -12,6 +12,8 @@ public interface IPiece {
 
     int getType();
 
+    String getView();
+
     IRule getRule();
 
     int getGroup();

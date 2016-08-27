@@ -11,7 +11,6 @@ public class Test {
 
     public static void main(String[] args) {
 
-        IPiece ju = new JuPiece(Groups.GROUP_BLUE);
 
 
     }
