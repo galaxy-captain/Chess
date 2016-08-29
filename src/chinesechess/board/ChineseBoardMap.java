@@ -41,7 +41,7 @@ public class ChineseBoardMap implements IBoardMap {
         putPiece(new BoardPoint(2, 7), new PaoPiece(Groups.GROUP_BLUE, new BoardPoint(2, 7)));
         putPiece(new BoardPoint(3, 0), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 0)));
         putPiece(new BoardPoint(3, 2), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 2)));
-        putPiece(new BoardPoint(3, 4), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 4)));
+//        putPiece(new BoardPoint(3, 4), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 4)));
         putPiece(new BoardPoint(3, 6), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 6)));
         putPiece(new BoardPoint(3, 8), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 8)));
 
@@ -53,12 +53,12 @@ public class ChineseBoardMap implements IBoardMap {
         putPiece(new BoardPoint(9, 6), new XiangPiece(Groups.GROUP_RED, new BoardPoint(9, 6)));
         putPiece(new BoardPoint(9, 3), new ShiPiece(Groups.GROUP_RED, new BoardPoint(9, 3)));
         putPiece(new BoardPoint(9, 5), new ShiPiece(Groups.GROUP_RED, new BoardPoint(9, 5)));
-        putPiece(new BoardPoint(9, 4), new KingPiece(Groups.GROUP_RED, new BoardPoint(9, 4)));
+//        putPiece(new BoardPoint(9, 4), new KingPiece(Groups.GROUP_RED, new BoardPoint(9, 4)));
         putPiece(new BoardPoint(7, 1), new PaoPiece(Groups.GROUP_RED, new BoardPoint(7, 1)));
         putPiece(new BoardPoint(7, 7), new PaoPiece(Groups.GROUP_RED, new BoardPoint(7, 7)));
         putPiece(new BoardPoint(6, 0), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 0)));
         putPiece(new BoardPoint(6, 2), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 2)));
-        putPiece(new BoardPoint(6, 4), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 4)));
+//        putPiece(new BoardPoint(6, 4), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 4)));
         putPiece(new BoardPoint(6, 6), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 6)));
         putPiece(new BoardPoint(6, 8), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 8)));
     }

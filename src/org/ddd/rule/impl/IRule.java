@@ -17,6 +17,6 @@ public interface IRule {
      * @param piece 棋子
      * @return
      */
-    boolean move(AbsBoard board, BoardPoint point, IPiece piece);
+    boolean move(final AbsBoard board,final BoardPoint point,final IPiece piece);
 
 }
