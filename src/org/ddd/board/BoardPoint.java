@@ -53,4 +53,15 @@ public class BoardPoint {
                 ", y=" + y +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        BoardPoint tmp = null;
+
+        if (obj instanceof BoardPoint) tmp = (BoardPoint) obj;
+
+        return tmp != null && tmp.x == this.x && tmp.y == this.y;
+
+    }
 }

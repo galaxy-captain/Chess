@@ -11,11 +11,7 @@ import org.ddd.piece.impl.IPiece;
 public class ShiRule extends ChineseChessRule {
 
     @Override
-    public boolean move(AbsBoard board, BoardPoint point, IPiece piece) {
-        super.move(board, point, piece);
-
-        movePiece(false);
-
-        return true;
+    protected boolean moveRule() {
+        return false;
     }
 }

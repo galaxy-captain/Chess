@@ -1,32 +1,20 @@
 package chinesechess.rule.abs;
 
-import org.ddd.board.AbsBoard;
-import org.ddd.board.BoardPoint;
-import org.ddd.piece.impl.IPiece;
-import org.ddd.rule.impl.IRule;
+import org.ddd.rule.impl.AbsRule;
+
 
 /**
  * Created by ddd on 16/8/27.
  */
-public class ChineseChessRule implements IRule {
-
-    private AbsBoard board;
-    private BoardPoint point;
-    private IPiece piece;
+public abstract class ChineseChessRule extends AbsRule {
 
     @Override
-    public boolean move(AbsBoard board, BoardPoint point, IPiece piece) {
+    protected void movePiece(boolean isMove) {
 
-        this.board = board;
-        this.point = point;
-        this.piece = piece;
-
-        return false;
-    }
-
-    protected void movePiece(boolean move) {
-
-        if (!move) return;
+        if (!isMove) {
+            System.out.println("\n移动失败\n");
+            return;
+        }
 
         // 将棋子移动到指定位置
         board.putPieceOnMap(point, piece);
@@ -34,17 +22,9 @@ public class ChineseChessRule implements IRule {
         board.putPieceOnMap(piece.getPoint(), null);
         // 改变棋子中记录的位置
         piece.setPoint(point);
+
+        System.out.println("\n移动成功\n");
+
     }
 
-    public AbsBoard getBoard() {
-        return board;
-    }
-
-    public BoardPoint getPoint() {
-        return point;
-    }
-
-    public IPiece getPiece() {
-        return piece;
-    }
 }

@@ -16,11 +16,16 @@ public class Game {
 
         ChineseChess game = new ChineseChess();
 
-        game.putPiece(new BoardPoint(1, 0), game.getPiece(new BoardPoint(0,0)));
-        game.putPiece(new BoardPoint(1, 3), game.getPiece(new BoardPoint(1,0)));
-        game.putPiece(new BoardPoint(6, 3), game.getPiece(new BoardPoint(1,3)));
-        game.putPiece(new BoardPoint(6, 2), game.getPiece(new BoardPoint(6,3)));
+//        // 车(JU)移动测试
+//        game.putPiece(new BoardPoint(1, 0), game.getPiece(new BoardPoint(0,0)));
+//        game.putPiece(new BoardPoint(1, 3), game.getPiece(new BoardPoint(1,0)));
+//        game.putPiece(new BoardPoint(6, 3), game.getPiece(new BoardPoint(1,3)));
+//        game.putPiece(new BoardPoint(6, 2), game.getPiece(new BoardPoint(6,3)));
 
+//        game.putPiece(new BoardPoint(4,0),game.getPiece(new BoardPoint(3,0)));
+        game.putPiece(new BoardPoint(5,0),game.getPiece(new BoardPoint(6,0)));
+        game.putPiece(new BoardPoint(4,0),game.getPiece(new BoardPoint(5,0)));
+        game.putPiece(new BoardPoint(4,1),game.getPiece(new BoardPoint(4,0)));
         game.view();
 
     }

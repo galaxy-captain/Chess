@@ -6,21 +6,14 @@ import org.ddd.board.BoardPoint;
 import org.ddd.piece.impl.IPiece;
 
 /**
+ * 车(JU)的移动规则
+ *
  * Created by ddd on 16/8/26.
  */
 public class JuRule extends ChineseChessRule {
 
     @Override
-    public boolean move(AbsBoard board, BoardPoint point, IPiece piece) {
-        super.move(board, point, piece);
-
-        boolean enableMove = moveRule();
-
-        movePiece(enableMove);
-        return enableMove;
-    }
-
-    private boolean moveRule() {
+    protected boolean moveRule() {
 
         int toPointX = getPoint().getX();
         int pointX = getPiece().getPoint().getX();
@@ -40,14 +33,6 @@ public class JuRule extends ChineseChessRule {
 
     }
 
-    private boolean equalsline(int coordinateX, int coordinateY, int toX, int toY, int oldX, int oldY) {
-
-        BoardPoint tmpPoint = new BoardPoint(oldX, oldY);
-
-        return true;
-
-    }
-
     /**
      * 在X轴上移动
      *
@@ -57,6 +42,9 @@ public class JuRule extends ChineseChessRule {
      * @return
      */
     private boolean equalsLineInX(int coordinateY, int toX, int oldX) {
+
+        // 不能原地移动
+        if(toX == oldX) return false;
 
         BoardPoint tmpPoint = new BoardPoint(oldX, coordinateY);
 
@@ -101,6 +89,9 @@ public class JuRule extends ChineseChessRule {
      * @return
      */
     private boolean equalsLineInY(int coordinateX, int toY, int oldY) {
+
+        // 不能原地移动
+        if(toY == oldY) return false;
 
         BoardPoint tmpPoint = new BoardPoint(coordinateX, oldY);
 

@@ -12,12 +12,17 @@ public abstract class AbsBoard implements IBoard {
 
     protected IBoardMap boardMap;
 
-    public AbsBoard(IBoardMap boardMap){
+    public AbsBoard(IBoardMap boardMap) {
         this.boardMap = boardMap;
     }
 
     @Override
     public boolean putPiece(BoardPoint point, IPiece piece) {
+
+        if (piece == null) {
+            System.out.println("坐标点没有获取到棋子,移动失败");
+            return false;
+        }
 
         // 根据棋子的规则在棋盘上进行移动
         boolean isMove = piece.getRule().move(this, point, piece);
@@ -39,6 +44,6 @@ public abstract class AbsBoard implements IBoard {
         boardMap.putPiece(point, piece);
     }
 
-    protected abstract void savePieceMoveSetup(Map<String,IPiece> boardMap);
+    protected abstract void savePieceMoveSetup(Map<String, IPiece> boardMap);
 
 }

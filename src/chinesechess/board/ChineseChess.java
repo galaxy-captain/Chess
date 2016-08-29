@@ -40,9 +40,9 @@ public class ChineseChess extends AbsBoard {
 
     @Override
     protected void savePieceMoveSetup(Map<String, IPiece> map) {
-        System.out.println();
-        System.out.println("保存棋盘成功");
-        System.out.println();
+//        System.out.println();
+//        System.out.println("保存棋盘成功");
+//        System.out.println();
     }
 
     public void view() {
