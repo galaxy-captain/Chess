@@ -1,10 +1,9 @@
 package chinesechess.piece;
 
 import chinesechess.rule.ShiRule;
-import chinesechess.rule.XiangRule;
 import org.ddd.board.BoardPoint;
 import org.ddd.piece.impl.AbsPiece;
-import org.ddd.piece.impl.PieceType;
+import chinesechess.board.PieceType;
 import org.ddd.rule.impl.IRule;
 
 /**

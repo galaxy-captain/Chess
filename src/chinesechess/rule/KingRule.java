@@ -2,10 +2,9 @@ package chinesechess.rule;
 
 import chinesechess.board.Groups;
 import chinesechess.rule.abs.ChineseChessRule;
-import org.ddd.board.AbsBoard;
 import org.ddd.board.BoardPoint;
 import org.ddd.piece.impl.IPiece;
-import org.ddd.piece.impl.PieceType;
+import chinesechess.board.PieceType;
 
 /**
  * 将(KING)的移动规则

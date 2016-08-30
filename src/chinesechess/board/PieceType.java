@@ -1,4 +1,4 @@
-package org.ddd.piece.impl;
+package chinesechess.board;
 
 /**
  * Created by ddd on 16/8/26.

@@ -3,7 +3,7 @@ package chinesechess.piece;
 import chinesechess.rule.MaRule;
 import org.ddd.board.BoardPoint;
 import org.ddd.piece.impl.AbsPiece;
-import org.ddd.piece.impl.PieceType;
+import chinesechess.board.PieceType;
 import org.ddd.rule.impl.IRule;
 
 /**

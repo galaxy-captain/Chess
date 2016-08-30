@@ -27,9 +27,11 @@ public class Game {
 //        game.putPiece(new BoardPoint(4,0),game.getPiece(new BoardPoint(5,0)));
 //        game.putPiece(new BoardPoint(4,1),game.getPiece(new BoardPoint(4,0)));
 
-//        game.putPiece(new BoardPoint(1,4),game.getPiece(new BoardPoint(0,4)));
-//        game.putPiece(new BoardPoint(2,4),game.getPiece(new BoardPoint(1,4)));
-//        game.putPiece(new BoardPoint(3,4),game.getPiece(new BoardPoint(2,4)));
+//        game.putPiece(new BoardPoint(0,5),game.getPiece(new BoardPoint(0,4)));
+
+        game.putPiece(new BoardPoint(2,4),game.getPiece(new BoardPoint(2,1)));
+        game.putPiece(new BoardPoint(6,4),game.getPiece(new BoardPoint(2,4)));
+        game.putPiece(new BoardPoint(7,4),game.getPiece(new BoardPoint(6,4)));
 
         game.view();
 

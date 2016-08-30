@@ -28,6 +28,7 @@ public class ChineseBoardMap implements IBoardMap {
     }
 
     public void initPiece() {
+        // 初始化蓝方棋子
         putPiece(new BoardPoint(0, 0), new JuPiece(Groups.GROUP_BLUE, new BoardPoint(0, 0)));
         putPiece(new BoardPoint(0, 8), new JuPiece(Groups.GROUP_BLUE, new BoardPoint(0, 8)));
         putPiece(new BoardPoint(0, 1), new MaPiece(Groups.GROUP_BLUE, new BoardPoint(0, 1)));
@@ -44,7 +45,7 @@ public class ChineseBoardMap implements IBoardMap {
         putPiece(new BoardPoint(3, 4), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 4)));
         putPiece(new BoardPoint(3, 6), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 6)));
         putPiece(new BoardPoint(3, 8), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 8)));
-
+        // 初始化红方棋子
         putPiece(new BoardPoint(9, 0), new JuPiece(Groups.GROUP_RED, new BoardPoint(9, 9)));
         putPiece(new BoardPoint(9, 8), new JuPiece(Groups.GROUP_RED, new BoardPoint(9, 8)));
         putPiece(new BoardPoint(9, 1), new MaPiece(Groups.GROUP_RED, new BoardPoint(9, 1)));
