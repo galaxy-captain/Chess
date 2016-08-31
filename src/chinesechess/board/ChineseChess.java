@@ -56,7 +56,13 @@ public class ChineseChess extends AbsBoard {
                 IPiece piece = map.get(x + "," + y);
 
                 if (piece == null) {
-                    System.out.print("十");
+
+                    if (x == 4 || x == 5) {
+                        System.out.print("一");
+                    } else {
+                        System.out.print("十");
+                    }
+
                 } else {
                     System.out.print(piece.getView());
                 }
@@ -67,9 +73,9 @@ public class ChineseChess extends AbsBoard {
             System.out.println();
 
             if (x == 4) {
-                System.out.println("------------------------");
+//                System.out.println("------------------------");
                 System.out.println("\t\t汉界  楚河");
-                System.out.println("------------------------");
+//                System.out.println("------------------------");
             }
         }
 
