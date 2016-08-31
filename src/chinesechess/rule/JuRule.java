@@ -21,7 +21,6 @@ public class JuRule extends ChineseChessRule {
         int toPointY = getPoint().getY();
         int pointY = getPiece().getPoint().getY();
 
-
         if (pointX == toPointX && pointY != toPointY) {
             return equalsLineInY(pointX, toPointY, pointY);
 
