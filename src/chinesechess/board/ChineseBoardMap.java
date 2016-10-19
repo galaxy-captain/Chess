@@ -27,6 +27,9 @@ public class ChineseBoardMap implements IBoardMap {
         }
     }
 
+    /**
+     * 初始化棋盘上的所有棋子
+     */
     public void initPiece() {
         // 初始化蓝方棋子
         putPiece(new BoardPoint(0, 0), new JuPiece(Groups.GROUP_BLUE, new BoardPoint(0, 0)));

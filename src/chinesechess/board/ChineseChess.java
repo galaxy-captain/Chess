@@ -8,24 +8,13 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * 中国象棋
+ *
  * Created by ddd on 16/8/26.
  */
 public class ChineseChess extends AbsBoard {
 
-    int[][] mView = new int[][]{
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-            {0, 1, 2, 3, 4, 5, 6, 7, 8},
-    };
-
-    public static ChineseChess createChess() {
+    public static ChineseChess newGame() {
         return new ChineseChess(new ChineseBoardMap());
     }
 
@@ -40,9 +29,7 @@ public class ChineseChess extends AbsBoard {
 
     @Override
     protected void savePieceMoveSetup(Map<String, IPiece> map) {
-//        System.out.println();
-//        System.out.println("保存棋盘成功");
-//        System.out.println();
+
     }
 
     public void view() {
