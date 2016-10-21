@@ -76,7 +76,7 @@ public class GameController {
 
         IPiece piece = mGame.getPiece(pieceX, pieceY);
 
-        if (piece.getGroup() != this.mGroup) {
+        if (piece != null && piece.getGroup() != this.mGroup) {
             System.out.println("只能控制自己的棋子\n");
             return false;
         }
