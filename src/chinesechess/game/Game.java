@@ -14,11 +14,14 @@ public class Game {
 
     public static void main(String[] args) {
 
-        ChineseChess game = new ChineseChess();
+        GameController game = GameController.init();
+//        ChineseChess game = new ChineseChess();
 
-//        // 车(JU)移动测试
-//        game.putPiece(new BoardPoint(1, 0), game.getPiece(new BoardPoint(0,0)));
-//        game.putPiece(new BoardPoint(1, 3), game.getPiece(new BoardPoint(1,0)));
+
+        // 马(MA)移动测试
+        game.step(Groups.GROUP_RED, 6, 0, 9, 0);
+//        game.step(Groups.GROUP_BLUE, 0, 1, 0, 0);
+//        game.putPiece(new BoardPoint(2, 4), game.getPiece(new BoardPoint(0, 2)));
 //        game.putPiece(new BoardPoint(6, 3), game.getPiece(new BoardPoint(1,3)));
 //        game.putPiece(new BoardPoint(6, 2), game.getPiece(new BoardPoint(6,3)));
 
@@ -42,6 +45,8 @@ public class Game {
 //        game.putPiece(new BoardPoint(2, 0), game.getPiece(new BoardPoint(0, 2)));
 
         game.view();
+
+        System.out.println(game.map().toString());
 
     }
 

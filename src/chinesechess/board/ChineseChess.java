@@ -9,7 +9,7 @@ import java.util.Set;
 
 /**
  * 中国象棋
- *
+ * <p>
  * Created by ddd on 16/8/26.
  */
 public class ChineseChess extends AbsBoard {
@@ -30,6 +30,10 @@ public class ChineseChess extends AbsBoard {
     @Override
     protected void savePieceMoveSetup(Map<String, IPiece> map) {
 
+    }
+
+    public Map map() {
+        return super.boardMap.getBoardMap();
     }
 
     public void view() {
