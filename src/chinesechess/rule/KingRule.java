@@ -46,10 +46,8 @@ public class KingRule extends ChineseChessRule {
         // 将每次只能移动一个单位
         if (Math.abs(toX - oldX) != 1) return false;
 
-        // 蓝方的将只能在0-2移动
-        if (Groups.GROUP_BLUE == getPiece().getGroup() && toX > 2) return false;
-        // 红方的将只能在9-7移动
-        if (Groups.GROUP_RED == getPiece().getGroup() && toX < 7) return false;
+        // 将在Y轴上,只能在3-5的范围能移动
+        if (toX <= 3 || toX >= 5) return false;
 
         // 是否对将
         if (otherKingAtLine(toX, coordinateY)) return false;
@@ -75,8 +73,10 @@ public class KingRule extends ChineseChessRule {
         // 将每次只能移动一个单位
         if (Math.abs(toY - oldY) != 1) return false;
 
-        // 将在Y轴上,只能在3-5的范围能移动
-        if (toY <= 3 && toY >= 5) return false;
+        // 蓝方的将只能在0-2移动
+        if (Groups.GROUP_BLUE == getPiece().getGroup() && toY <= 2) return false;
+        // 红方的将只能在9-7移动
+        if (Groups.GROUP_RED == getPiece().getGroup() && toY >= 7) return false;
 
         // 是否对将
         if (otherKingAtLine(coordinateX, toY)) return false;
@@ -102,16 +102,16 @@ public class KingRule extends ChineseChessRule {
 
         if (Groups.GROUP_BLUE == getPiece().getGroup()) {
             // 蓝方需要从0->9进行判断
-            for (int i = toX + 1; i <= 9; i++) {
+            for (int i = toY + 1; i <= 9; i++) {
 
-                tmpPoint.setX(i);
+                tmpPoint.setY(i);
 
                 IPiece pieceAtLine = getBoard().getPiece(tmpPoint);
 
-                // X轴上有其他棋子,则可以移动,退出循环
+                // Y轴上有其他棋子,则可以移动,退出循环
                 if (pieceAtLine != null && pieceAtLine.getType() != PieceType.KING) return false;
 
-                // X轴上在将之前没有其他棋子,则不可移动
+                // Y轴上在将之前没有其他棋子,则不可移动
                 if (pieceAtLine != null && pieceAtLine.getType() == PieceType.KING) return true;
 
             }
@@ -119,16 +119,16 @@ public class KingRule extends ChineseChessRule {
         } else if (Groups.GROUP_RED == getPiece().getGroup()) {
 
             // 红方需要从9->0进行判断
-            for (int i = toX - 1; i >= 0; i--) {
+            for (int i = toY - 1; i >= 0; i--) {
 
-                tmpPoint.setX(i);
+                tmpPoint.setY(i);
 
                 IPiece pieceAtLine = getBoard().getPiece(tmpPoint);
 
-                // X轴上有其他棋子,则可以移动,退出循环
+                // Y轴上有其他棋子,则可以移动,退出循环
                 if (pieceAtLine != null && pieceAtLine.getType() != PieceType.KING) return false;
 
-                // X轴上在将之前没有其他棋子,则不可移动
+                // Y轴上在将之前没有其他棋子,则不可移动
                 if (pieceAtLine != null && pieceAtLine.getType() == PieceType.KING) return true;
 
             }

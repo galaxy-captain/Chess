@@ -40,15 +40,15 @@ public class ChineseChess extends AbsBoard {
 
         Map<String, IPiece> map = super.boardMap.getBoardMap();
 
-        for (int x = 0; x < 10; x++) {
+        for (int y = 0; y < 10; y++) {
 
-            for (int y = 0; y < 9; y++) {
+            for (int x = 0; x < 9; x++) {
 
                 IPiece piece = map.get(x + "," + y);
 
                 if (piece == null) {
 
-                    if (x == 4 || x == 5) {
+                    if (y == 4 || y == 5) {
                         System.out.print("一");
                     } else {
                         System.out.print("十");
@@ -63,7 +63,7 @@ public class ChineseChess extends AbsBoard {
 
             System.out.println();
 
-            if (x == 4) {
+            if (y == 4) {
 //                System.out.println("------------------------");
                 System.out.println("\t\t汉界  楚河");
 //                System.out.println("------------------------");

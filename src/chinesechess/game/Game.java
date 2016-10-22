@@ -17,9 +17,11 @@ public class Game {
         GameController game = GameController.init();
 //        ChineseChess game = new ChineseChess();
 
-
         // 马(MA)移动测试
-        game.step(Groups.GROUP_RED, 6, 0, 9, 0);
+        game.putPiece(4, 1, 4, 0);
+        game.putPiece(3, 1, 4, 1);
+        game.putPiece(2, 1, 3, 1);
+
 //        game.step(Groups.GROUP_BLUE, 0, 1, 0, 0);
 //        game.putPiece(new BoardPoint(2, 4), game.getPiece(new BoardPoint(0, 2)));
 //        game.putPiece(new BoardPoint(6, 3), game.getPiece(new BoardPoint(1,3)));

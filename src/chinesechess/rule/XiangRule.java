@@ -27,7 +27,7 @@ public class XiangRule extends ChineseChessRule {
         if (hasMoveObstacle(toPointX, toPointY, pointX, pointY)) return false;
 
         // 只能在范围内移动
-        if (!moveRange(toPointX)) return false;
+        if (!moveRange(toPointY)) return false;
 
         if (getBoard().getPiece(getPoint()) != null &&
                 getPiece().getGroup() == getBoard().getPiece(getPoint()).getGroup())
@@ -39,13 +39,13 @@ public class XiangRule extends ChineseChessRule {
     /**
      * 象的移动范围,象不能过河
      *
-     * @param toX
+     * @param toY
      * @return
      */
-    private boolean moveRange(int toX) {
+    private boolean moveRange(int toY) {
 
-        if (getPiece().getGroup() == Groups.GROUP_BLUE && toX <= 4) return true;
-        else if (getPiece().getGroup() == Groups.GROUP_RED && toX >= 7) return true;
+        if (getPiece().getGroup() == Groups.GROUP_BLUE && toY <= 4) return true;
+        else if (getPiece().getGroup() == Groups.GROUP_RED && toY >= 7) return true;
 
         return false;
 

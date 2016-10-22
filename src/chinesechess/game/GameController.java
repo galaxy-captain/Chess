@@ -5,7 +5,9 @@ import chinesechess.board.Groups;
 import org.ddd.board.BoardPoint;
 import org.ddd.piece.impl.IPiece;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by ddd on 16/8/27.
@@ -33,7 +35,27 @@ public class GameController {
     }
 
     public Map map() {
-        return mGame.map();
+
+        Map<String, Map<String, String>> pieces = new HashMap<>();
+
+        Map<String, IPiece> map = mGame.map();
+
+        Set<String> keys = map.keySet();
+
+        for (String key : keys) {
+
+            IPiece item = map.get(key);
+
+            if (item == null) continue;
+
+            Map<String, String> piece = new HashMap<>();
+            piece.put("group", item.getGroup() + "");
+            piece.put("type", item.getView());
+
+            pieces.put(key, piece);
+        }
+
+        return pieces;
     }
 
     /**

@@ -33,38 +33,38 @@ public class ChineseBoardMap implements IBoardMap {
     public void initPiece() {
         // 初始化蓝方棋子
         putPiece(new BoardPoint(0, 0), new JuPiece(Groups.GROUP_BLUE, new BoardPoint(0, 0)));
-        putPiece(new BoardPoint(0, 8), new JuPiece(Groups.GROUP_BLUE, new BoardPoint(0, 8)));
-        putPiece(new BoardPoint(0, 1), new MaPiece(Groups.GROUP_BLUE, new BoardPoint(0, 1)));
-        putPiece(new BoardPoint(0, 7), new MaPiece(Groups.GROUP_BLUE, new BoardPoint(0, 7)));
-        putPiece(new BoardPoint(0, 2), new XiangPiece(Groups.GROUP_BLUE, new BoardPoint(0, 2)));
-        putPiece(new BoardPoint(0, 6), new XiangPiece(Groups.GROUP_BLUE, new BoardPoint(0, 6)));
-        putPiece(new BoardPoint(0, 3), new ShiPiece(Groups.GROUP_BLUE, new BoardPoint(0, 3)));
-        putPiece(new BoardPoint(0, 5), new ShiPiece(Groups.GROUP_BLUE, new BoardPoint(0, 5)));
-        putPiece(new BoardPoint(0, 4), new KingPiece(Groups.GROUP_BLUE, new BoardPoint(0, 4)));
-        putPiece(new BoardPoint(2, 1), new PaoPiece(Groups.GROUP_BLUE, new BoardPoint(2, 1)));
-        putPiece(new BoardPoint(2, 7), new PaoPiece(Groups.GROUP_BLUE, new BoardPoint(2, 7)));
-        putPiece(new BoardPoint(3, 0), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 0)));
-        putPiece(new BoardPoint(3, 2), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 2)));
-        putPiece(new BoardPoint(3, 4), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 4)));
-        putPiece(new BoardPoint(3, 6), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 6)));
-        putPiece(new BoardPoint(3, 8), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(3, 8)));
+        putPiece(new BoardPoint(8, 0), new JuPiece(Groups.GROUP_BLUE, new BoardPoint(8, 0)));
+        putPiece(new BoardPoint(1, 0), new MaPiece(Groups.GROUP_BLUE, new BoardPoint(1, 0)));
+        putPiece(new BoardPoint(7, 0), new MaPiece(Groups.GROUP_BLUE, new BoardPoint(7, 0)));
+        putPiece(new BoardPoint(2, 0), new XiangPiece(Groups.GROUP_BLUE, new BoardPoint(2, 0)));
+        putPiece(new BoardPoint(6, 0), new XiangPiece(Groups.GROUP_BLUE, new BoardPoint(6, 0)));
+        putPiece(new BoardPoint(3, 0), new ShiPiece(Groups.GROUP_BLUE, new BoardPoint(3, 0)));
+        putPiece(new BoardPoint(5, 0), new ShiPiece(Groups.GROUP_BLUE, new BoardPoint(5, 0)));
+        putPiece(new BoardPoint(4, 0), new KingPiece(Groups.GROUP_BLUE, new BoardPoint(4, 0)));
+        putPiece(new BoardPoint(1, 2), new PaoPiece(Groups.GROUP_BLUE, new BoardPoint(1, 2)));
+        putPiece(new BoardPoint(7, 2), new PaoPiece(Groups.GROUP_BLUE, new BoardPoint(7, 2)));
+        putPiece(new BoardPoint(0, 3), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(0, 3)));
+        putPiece(new BoardPoint(2, 3), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(2, 3)));
+        putPiece(new BoardPoint(4, 3), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(4, 3)));
+        putPiece(new BoardPoint(6, 3), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(6, 3)));
+        putPiece(new BoardPoint(8, 3), new BingPiece(Groups.GROUP_BLUE, new BoardPoint(8, 3)));
         // 初始化红方棋子
-        putPiece(new BoardPoint(9, 0), new JuPiece(Groups.GROUP_RED, new BoardPoint(9, 9)));
-        putPiece(new BoardPoint(9, 8), new JuPiece(Groups.GROUP_RED, new BoardPoint(9, 8)));
-        putPiece(new BoardPoint(9, 1), new MaPiece(Groups.GROUP_RED, new BoardPoint(9, 1)));
-        putPiece(new BoardPoint(9, 7), new MaPiece(Groups.GROUP_RED, new BoardPoint(9, 7)));
-        putPiece(new BoardPoint(9, 2), new XiangPiece(Groups.GROUP_RED, new BoardPoint(9, 2)));
-        putPiece(new BoardPoint(9, 6), new XiangPiece(Groups.GROUP_RED, new BoardPoint(9, 6)));
-        putPiece(new BoardPoint(9, 3), new ShiPiece(Groups.GROUP_RED, new BoardPoint(9, 3)));
-        putPiece(new BoardPoint(9, 5), new ShiPiece(Groups.GROUP_RED, new BoardPoint(9, 5)));
-        putPiece(new BoardPoint(9, 4), new KingPiece(Groups.GROUP_RED, new BoardPoint(9, 4)));
-        putPiece(new BoardPoint(7, 1), new PaoPiece(Groups.GROUP_RED, new BoardPoint(7, 1)));
+        putPiece(new BoardPoint(0, 9), new JuPiece(Groups.GROUP_RED, new BoardPoint(0, 9)));
+        putPiece(new BoardPoint(8, 9), new JuPiece(Groups.GROUP_RED, new BoardPoint(8, 9)));
+        putPiece(new BoardPoint(1, 9), new MaPiece(Groups.GROUP_RED, new BoardPoint(1, 9)));
+        putPiece(new BoardPoint(7, 9), new MaPiece(Groups.GROUP_RED, new BoardPoint(7, 9)));
+        putPiece(new BoardPoint(2, 9), new XiangPiece(Groups.GROUP_RED, new BoardPoint(2, 9)));
+        putPiece(new BoardPoint(6, 9), new XiangPiece(Groups.GROUP_RED, new BoardPoint(6, 9)));
+        putPiece(new BoardPoint(3, 9), new ShiPiece(Groups.GROUP_RED, new BoardPoint(3, 9)));
+        putPiece(new BoardPoint(5, 9), new ShiPiece(Groups.GROUP_RED, new BoardPoint(5, 9)));
+        putPiece(new BoardPoint(4, 9), new KingPiece(Groups.GROUP_RED, new BoardPoint(4, 9)));
+        putPiece(new BoardPoint(1, 7), new PaoPiece(Groups.GROUP_RED, new BoardPoint(1, 7)));
         putPiece(new BoardPoint(7, 7), new PaoPiece(Groups.GROUP_RED, new BoardPoint(7, 7)));
-        putPiece(new BoardPoint(6, 0), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 0)));
-        putPiece(new BoardPoint(6, 2), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 2)));
-        putPiece(new BoardPoint(6, 4), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 4)));
+        putPiece(new BoardPoint(0, 6), new BingPiece(Groups.GROUP_RED, new BoardPoint(0, 6)));
+        putPiece(new BoardPoint(2, 6), new BingPiece(Groups.GROUP_RED, new BoardPoint(2, 6)));
+        putPiece(new BoardPoint(4, 6), new BingPiece(Groups.GROUP_RED, new BoardPoint(4, 6)));
         putPiece(new BoardPoint(6, 6), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 6)));
-        putPiece(new BoardPoint(6, 8), new BingPiece(Groups.GROUP_RED, new BoardPoint(6, 8)));
+        putPiece(new BoardPoint(8, 6), new BingPiece(Groups.GROUP_RED, new BoardPoint(8, 6)));
     }
 
     private String autoKey(BoardPoint point) {

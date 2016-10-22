@@ -44,8 +44,8 @@ public class ShiRule extends ChineseChessRule {
      */
     private boolean moveRange(int toX, int toY) {
 
-        if (getPiece().getGroup() == Groups.GROUP_BLUE && toX <= 2 && toY >= 3 && toY <= 5) return true;
-        else if (getPiece().getGroup() == Groups.GROUP_RED && toX >= 7 && toY >= 3 && toY <= 5) return true;
+        if (getPiece().getGroup() == Groups.GROUP_BLUE && toY <= 2 && toX >= 3 && toX <= 5) return true;
+        else if (getPiece().getGroup() == Groups.GROUP_RED && toY >= 7 && toX >= 3 && toX <= 5) return true;
 
         return false;
 
